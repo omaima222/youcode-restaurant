@@ -1,0 +1,102 @@
+
+.menu{
+    background-color: $accent-color;
+}
+.menuBar{
+    background-image: url('img/547397.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.212);
+    background-blend-mode: color;
+    background-attachment: fixed;
+    height: 20rem;
+    .menuTitle{
+       text-align: center;
+       margin-top: 3rem;
+       font-size: 5rem;
+       font-family: 'Cinzel', serif;
+       color: $secondary-color;
+       font-weight: 300;
+    }
+}
+
+.allDishes{
+    .dish{
+        margin: 2rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        img{
+            width: 15rem;
+            height: 12rem;
+            transition: 0.3s ease-in-out;
+            -webkit-transition: 0.3s ease-in-out;
+            -moz-transition: 0.3s ease-in-out;
+            -ms-transition: 0.3s ease-in-out;
+            -o-transition: 0.3s ease-in-out;
+            box-shadow: -6px 7px 7px -3px rgb(0 0 0 / 58%);
+            &:hover{
+                transform: scale(1.02);
+                -webkit-transform: scale(1.02);
+                -moz-transform: scale(1.02);
+                -ms-transform: scale(1.02);
+                -o-transform: scale(1.02);
+            }  
+        }
+        .dishInfo{
+            width: 45rem;
+            height: 8.8rem;
+            padding: 1rem;
+            background-color: $secondary-color;
+            font-family: 'Cinzel', serif;
+            color: $text-color;
+            .dishInfo_head{
+                display: flex;
+                justify-content: space-between;
+                h1{
+                    font-size: 1.5rem;
+                    font-weight: 300;
+                }
+                h2{
+                    font-size: 1.2rem;
+                    font-weight: 300;
+                    color: $accent-color;
+                }
+            }
+            p{
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+                font-weight: 300;
+                font-size: 0.8rem;
+            }
+            button{
+                float: right;
+                font-family: 'Poiret One', cursive;
+                font-size: 1rem;
+                margin-top: 1rem;
+                background: $accent-color;
+                border: 1px solid $accent-color;
+                color: $secondary-color;
+                padding: 0.3rem;
+                width: 4rem;
+                border-radius: 2px;
+                -webkit-border-radius: 2px;
+                -moz-border-radius: 2px;
+                -ms-border-radius: 2px;
+                -o-border-radius: 2px;
+                transition: 0.3s ease-in-out;
+                -webkit-transition: 0.3s ease-in-out;
+                -moz-transition: 0.3s ease-in-out;
+                -ms-transition: 0.3s ease-in-out;
+                -o-transition: 0.3s ease-in-out;
+                &:hover{
+                    background: none;
+                    color: $text-color;
+                    border: 1px solid $text-color;
+                }
+            }
+        }
+    }
+}

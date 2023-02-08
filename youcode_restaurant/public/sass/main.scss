@@ -1,0 +1,20 @@
+
+// __________abstract____________//
+@import 'abstract/mixings';
+@import 'abstract/variables';
+
+// __________base____________//
+@import 'base/main';
+
+// __________components____________//
+@import 'components/navBar';
+
+// __________pages____________//
+@import 'pages/dashboard';
+@import 'pages/login';
+@import 'pages/signup';
+@import 'pages/test';
+@import 'pages/welcome';
+@import 'pages/menu';
+@import 'pages/dishForm';
+

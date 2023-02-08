@@ -1,0 +1,108 @@
+
+
+.mainbody{
+    background-color: $secondary-color;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+.dash_menu{
+    margin: 2rem;
+}
+.dash_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h1{
+        color: $accent-color;
+        font-family: 'Cinzel', serif;
+        font-weight: 300;
+        font-size: 5rem;
+    }
+    button{
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
+        font-family: 'Poiret One', cursive;
+        font-size: 1rem;
+        background: none;
+        border: 1px solid $accent-color;
+        color: $accent-color;
+        padding: 0.5rem;
+        border-radius: 2px;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        -ms-border-radius: 2px;
+        -o-border-radius: 2px;
+        transition: 0.3s ease-in-out;
+        -webkit-transition: 0.3s ease-in-out;
+        -moz-transition: 0.3s ease-in-out;
+        -ms-transition: 0.3s ease-in-out;
+        -o-transition: 0.3s ease-in-out;
+        &:hover{
+            background: $text-color;
+            color: black;
+            border: 1px solid $text-color;
+        }
+    }
+
+}
+
+.menuTable{
+    margin-top: 2rem;
+    background-color: $text-color;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+     text-align: start;
+}
+
+
+table{
+    img{
+        width: 8rem;
+        border-radius: 2px;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        -ms-border-radius: 2px;
+        -o-border-radius: 2px;
+    }
+    td,th{
+        text-align: left!important;
+        padding: 0.5rem;
+        border-bottom: 1px solid $secondary-color;
+    }
+    button{
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
+        margin: 0.3rem;
+        font-family: 'Poiret One', cursive;
+        font-size: 1rem;
+        background: $accent-color;
+        border: 1px solid $accent-color;
+        color: $text-color;
+        padding: 0.5rem;
+        border-radius: 2px;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        -ms-border-radius: 2px;
+        -o-border-radius: 2px;
+        transition: 0.3s ease-in-out;
+        -webkit-transition: 0.3s ease-in-out;
+        -moz-transition: 0.3s ease-in-out;
+        -ms-transition: 0.3s ease-in-out;
+        -o-transition: 0.3s ease-in-out;
+        &:hover{
+            background: none;
+            color: $secondary-color;
+            border: 1px solid $secondary-color;
+        }
+    }
+}

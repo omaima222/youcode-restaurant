@@ -1,0 +1,43 @@
+
+
+.navBar{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1.5rem;
+    padding: 1rem;
+    a{
+        text-decoration: none;
+        color: $text-color;
+    }
+    h1{
+        color: $text-color;
+        font-size: 2rem;
+        font-family: 'Alex Brush', cursive;
+        font-weight: 400;
+    }
+    #{&}_buttons{
+        button{
+            background: none;
+            padding: 0.3rem;
+            border: none;
+            margin-left: 2rem;
+            margin-right: 2rem;
+            font-family: 'Poiret One', cursive;
+            font-size: 1.2rem;
+            color: $text-color;
+            transition:transforme 0.5s ease-in-out;
+            -webkit-transition:transforme 0.5s ease-in-out;
+            -moz-transition:transforme 0.5s ease-in-out;
+            -ms-transition:transforme 0.5s ease-in-out;
+            -o-transition:transforme 0.5s ease-in-out;
+            &:hover {
+                border-bottom: 2.5px solid $accent-color;
+                transform: translate(0,10);
+                -webkit-transform: translate(0,10);
+                -moz-transform: translate(0,10);
+                -ms-transform: translate(0,10);
+                -o-transform: translate(0,10);
+            }
+        }  
+    }
+}
