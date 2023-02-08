@@ -36,7 +36,7 @@
                         <h1>{{$dish['name']}}</h1>
                         <h2>{{$dish['price']}} $</h2>
                         </div>
-                        <p>{{$dish['description']}}</p>
+                        <p title="{{$dish['description']}}">{{ \Illuminate\Support\Str::limit($dish['description'], 70, $end=' ...') }}</p>
                         <button>order</button>
                     </section>
                 </section>

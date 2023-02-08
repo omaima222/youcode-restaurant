@@ -6,7 +6,7 @@
 <div class="dishForm">
     <div class="header">Edit the Dish</div>
     <div class="body">
-      <form action="{{route('Dashboard.store')}}" method="POST" enctype="multipart/form-data">
+      <form action="{{route('Dashboard.update', ['Dashboard'=> $dish['id']])}}" method="POST" enctype="multipart/form-data">
         @csrf
         @method('PUT')
           <div class="anInput">

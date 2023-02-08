@@ -25,9 +25,15 @@
                 <tr>
                     <td><img  src="{{url('dishes imgs/toast .jpg')}}" alt="{{$dish['image']}}"></td>
                     <td>{{$dish['name']}}</td>
-                    <td>{{$dish['description']}}</td>
+                    <td title="{{$dish['description']}}">{{ \Illuminate\Support\Str::limit($dish['description'], 65, $end='...') }}</td>
                     <td>{{$dish['price']}} $</td>
-                    <td><button><a href="">delete</a></button></td>
+                    <td>
+                    <form action="{{ route('Dashboard.destroy' , $dish['id']) }}" method="post">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit">delete</button>
+                    </form>    
+                    </td>
                     <td><button><a href="{{ route('Dashboard.show', ['Dashboard'=> $dish['id']])}}">edit</a></button></td>
                 </tr>
             @endforeach

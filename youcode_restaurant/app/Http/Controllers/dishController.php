@@ -110,6 +110,8 @@ class dishController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $dish = dish::findOrFail($id);
+        $dish->delete();
+        return redirect()->route('Dashboard.index');
     }
 }
