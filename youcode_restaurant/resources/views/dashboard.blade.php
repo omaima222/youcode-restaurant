@@ -23,7 +23,7 @@
             <tbody>
             @foreach($dish as $dish)
                 <tr>
-                    <td><img  src="{{url('dishes imgs/toast .jpg')}}" alt="{{$dish['image']}}"></td>
+                    <td><img  src="{{url('dishes imgs/'.$dish['image'])}}" alt="{{$dish['image']}}"></td>
                     <td>{{$dish['name']}}</td>
                     <td title="{{$dish['description']}}">{{ \Illuminate\Support\Str::limit($dish['description'], 65, $end='...') }}</td>
                     <td>{{$dish['price']}} $</td>
@@ -40,7 +40,7 @@
             </tbody>
         </table>
     @else 
-    <h1>No dishes availabale</h1>
+    <h1 class="nothing">No dishes availabale</h1>
     @endif
 </div>
 @endsection

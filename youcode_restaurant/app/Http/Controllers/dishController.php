@@ -47,9 +47,12 @@ class dishController extends Controller
          $dish = new dish();
          $dish->name = $request->input('name');
          $dish->description = $request->input('description');
-         $dish->image = $request->input('image');
+         $dish->image = $_FILES['image']['name'];
          $dish->price = $request->input('price');
          $dish->save();
+
+         move_uploaded_file($_FILES['image']['tmp_name'], 'dishes imgs/' .$_FILES['image']['name'] );
+
          return redirect()->route('Dashboard.index');
     }
 

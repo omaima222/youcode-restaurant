@@ -30,7 +30,7 @@
             @if(count($dish)>0)
             @foreach($dish as $dish)
                 <section class="dish">
-                    <img  src="{{url('dishes imgs/toast .jpg')}}" alt="{{$dish['image']}}">
+                    <img  src="{{url('dishes imgs/'. $dish['image'] )}}" alt="{{$dish['image']}}">
                     <section class="dishInfo">
                         <div class="dishInfo_head">
                         <h1>{{$dish['name']}}</h1>
@@ -42,7 +42,7 @@
                 </section>
             @endforeach
             @else 
-            <h1>No dishes availabale</h1>
+            <h1 class="nothing">No dishes availabale</h1>
             @endif
         </div>
     </body> 

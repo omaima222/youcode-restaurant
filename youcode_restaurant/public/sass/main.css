@@ -111,6 +111,11 @@ body {
   text-align: start;
 }
 
+table {
+  width: 100%;
+  overflow-x: auto;
+  border-collapse: collapse;
+}
 table img {
   width: 8rem;
   border-radius: 2px;
@@ -122,7 +127,9 @@ table img {
 table td, table th {
   text-align: left !important;
   padding: 0.5rem;
-  border-bottom: 1px solid #2e0206;
+}
+table tr {
+  border-top: 1px solid #2e0206;
 }
 table button {
   margin: 0.3rem;
@@ -151,6 +158,14 @@ table button:hover {
   background: none;
   color: #2e0206;
   border: 1px solid #2e0206;
+}
+
+.nothing {
+  margin-top: 2rem;
+  font-family: "Poiret One", cursive;
+  font-weight: 300;
+  color: rgb(238, 225, 201);
+  text-align: center;
 }
 
 .remember {
@@ -466,6 +481,12 @@ table button:hover {
   background: none;
   color: rgb(238, 225, 201);
   border: 1px solid rgb(238, 225, 201);
+}
+.allDishes .dish:nth-child(even) {
+  flex-direction: row-reverse;
+}
+.allDishes .dish:nth-child(even) button {
+  float: left;
 }
 
 .dishForm {

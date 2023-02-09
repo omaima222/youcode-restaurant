@@ -19,7 +19,7 @@
           </div>
           <div class="anInput">
             <label for="mage">Image</label>
-            <input type="text"  name="image" value="{{ old('image') }}">
+            <input type="file"  name="image" value="{{ old('image') }}" accept=" .jpg, .png, .jpeg ">
             @error('image')
                <div class="invalid-feedback" role="alert">
                       <strong>{{ $message }}</strong>

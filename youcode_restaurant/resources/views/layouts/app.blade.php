@@ -20,7 +20,8 @@
     <div id="app" >
         <div class="navBar">
             <h1><a href="{{route('welcome')}}"> {{ config('app.name', 'Laravel') }}</a></h1>
-            <div class="navBar_buttons">                        
+            <div class="navBar_buttons">                  
+                        <button><a href="{{route('menu')}}">menu</a></button>      
                         @guest
                             @if (Route::has('login'))
                                 <button><a cla ss="nav-link" href="{{ route('login') }}">log in</a></button>
@@ -30,17 +31,19 @@
                                 <button><a href="{{ route('register') }}">sign up</a></button>
                             @endif
                             @else
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <button>
+                                <a class="profile" href="{{ route('profile') }}" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
                                 </a>
+                                </button>
 
-                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                        onclick="event.preventDefault();
-                                                        document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-
+                                <button>
+                                <a class="logout" href="{{ route('logout') }}"
+                                    onclick="event.preventDefault();
+                                                    document.getElementById('logout-form').submit();">
+                                    {{ __('Logout') }}
+                                </a>
+                                </button>
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
                                     </form>
