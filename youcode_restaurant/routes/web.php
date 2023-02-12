@@ -22,10 +22,11 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::resource('/Dashboard', dishController::class);
+Route::resource('Dashboard', dishController::class)->middleware('auth');
 Route::get('/menu', [MenuController::class, 'index'])->name('menu');
-// Route::get('/profile', function(){return view('updateUser');})->name('profile');
-Route::resource('/profile', profileController::class);
+Route::resource('/profile', profileController::class)->middleware('auth');;
 
-
+Route::get('/test', function () {
+    return "ihiuhi";
+});
 

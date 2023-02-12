@@ -1,3 +1,4 @@
+
 @extends('layouts.app')
 
 <link rel="stylesheet" href="{{url('sass/main.css')}}">

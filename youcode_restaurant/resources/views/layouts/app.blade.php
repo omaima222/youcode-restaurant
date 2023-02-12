@@ -14,10 +14,9 @@
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet"> -->
 
     <!-- Scripts -->
-    <!-- @vite(['resources/sass/app.scss', 'resources/js/app.js']) -->
+    {{-- <!-- @vite(['resources/sass/app.scss', 'resources/js/app.js']) --> --}}
 </head>
-<body class="mainbody">
-    <div id="app" >
+<body  class="mainbody" >
         <div class="navBar">
             <h1><a href="{{route('welcome')}}"> {{ config('app.name', 'Laravel') }}</a></h1>
             <div class="navBar_buttons">                  
@@ -52,9 +51,6 @@
                 </div>
         </div>
         
-        <main class="mainbody">
-            @yield('content')
-        </main>
-    </div>
+        @yield('content')
 </body>
 </html>

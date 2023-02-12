@@ -5,6 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Welcome</title>
          <link rel="stylesheet" href="{{url('sass/main.css')}}">
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+         <script> src="{{ url('pubic/main.js') }}"</script>
     </head>
     <body class="menu">
         <div class="menuBar">
@@ -36,7 +38,7 @@
                         <h1>{{$dish['name']}}</h1>
                         <h2>{{$dish['price']}} $</h2>
                         </div>
-                        <p title="{{$dish['description']}}">{{ \Illuminate\Support\Str::limit($dish['description'], 70, $end=' ...') }}</p>
+                        <p title="{{$dish['description']}}">{{ \Illuminate\Support\Str::limit($dish['description'], 120, $end=' ...') }}</p>
                         <button>order</button>
                     </section>
                 </section>

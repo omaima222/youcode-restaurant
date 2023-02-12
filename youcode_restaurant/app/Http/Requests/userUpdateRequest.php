@@ -26,6 +26,7 @@ class userUpdateRequest extends FormRequest
         return [
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255'],
+            'password' => ['required', 'string', 'min:8', 'confirmed'],
         ];
     }
 
@@ -34,6 +35,7 @@ class userUpdateRequest extends FormRequest
         $this->merge([
             'name'=> strip_tags($this['name']),
             'email'=> strip_tags($this['email']),
+            'password'=> strip_tags($this['password'])
         ]);
     }
 
