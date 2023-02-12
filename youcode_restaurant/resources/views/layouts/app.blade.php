@@ -32,7 +32,7 @@
                             @endif
                             @else
                                 <button>
-                                <a class="profile" href="{{ route('profile') }}" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <a class="profile" href="{{ route('profile.index') }}" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
                                 </a>
                                 </button>

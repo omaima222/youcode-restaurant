@@ -6,7 +6,7 @@
 <div class="dishForm">
     <div class="header">Edit the Dish</div>
     <div class="body">
-      <form action="{{route('Dashboard.update', ['Dashboard'=> $dish['id']])}}" method="POST" enctype="multipart/form-data">
+      <form action="{{route('Dashboard.update', ['Dashboard'=> $dish['id']])}}" method="POST" enctype="multipart/form-data"  enctype="multipart/form-data">
         @csrf
         @method('PUT')
           <div class="anInput">
@@ -20,7 +20,7 @@
           </div>
           <div class="anInput">
             <label for="mage">Image</label>
-            <input type="text"  name="image" value="{{ $dish['image'] }}">
+            <input  type="file"  name="image" value="{{ $dish['image'] }}"  accept=" .jpg, .png, .jpeg ">
             @error('image')
                <div class="invalid-feedback" role="alert">
                       <strong>{{ $message }}</strong>

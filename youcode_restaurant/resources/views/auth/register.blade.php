@@ -29,7 +29,7 @@
                 </div>
 
                 <div class="">
-                    <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="Password" placeholder="password" required autocomplete="new-password">
+                    <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" placeholder="password" required autocomplete="new-password">
 
                     @error('password')
                         <div class="invalid-feedback" role="alert">

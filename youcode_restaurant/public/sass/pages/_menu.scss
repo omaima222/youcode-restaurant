@@ -50,7 +50,6 @@
             height: 8.8rem;
             padding: 1rem;
             background-color: $secondary-color;
-            font-family: 'Cinzel', serif;
             color: $text-color;
             .dishInfo_head{
                 display: flex;
@@ -58,18 +57,21 @@
                 h1{
                     font-size: 1.5rem;
                     font-weight: 300;
+                    font-family: 'Cinzel', serif;
                 }
                 h2{
                     font-size: 1.2rem;
                     font-weight: 300;
                     color: $accent-color;
+                    font-family: 'Cinzel', serif;
                 }
             }
             p{
                 margin-top: 1rem;
                 margin-bottom: 1rem;
                 font-weight: 300;
-                font-size: 0.8rem;
+                font-size: 1rem;
+                font-family: 'Open Sans', sans-serif;
             }
             button{
                 float: right;

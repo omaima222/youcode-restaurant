@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\dish;
+use App\Http\Requests\dishFormRequest;
 
 class dishController extends Controller
 {
@@ -35,22 +36,16 @@ class dishController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(dishFormRequest $request)
     {
-        $request->validate([
-            'name'=> 'required',
-            'description'=> 'required',
-            'image'=> 'required',
-            'price'=> ['required','integer']
-        ]);
+         $data = $request->validated();
 
          $dish = new dish();
-         $dish->name = $request->input('name');
-         $dish->description = $request->input('description');
+         $dish->name = $data['name'];
+         $dish->description = $data['description'];
          $dish->image = $_FILES['image']['name'];
-         $dish->price = $request->input('price');
+         $dish->price = $data['price'];
          $dish->save();
-
          move_uploaded_file($_FILES['image']['tmp_name'], 'dishes imgs/' .$_FILES['image']['name'] );
 
          return redirect()->route('Dashboard.index');
@@ -87,21 +82,17 @@ class dishController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(dishFormRequest $request, $id)
     {
-        $request->validate([
-            'name'=> 'required',
-            'description'=> 'required',
-            'image'=> 'required',
-            'price'=> ['required','integer']
-        ]);
+         $data = $request->validated();
 
          $dish = dish::findOrFail($id);
-         $dish->name = $request->input('name');
-         $dish->description = $request->input('description');
-         $dish->image = $request->input('image');
-         $dish->price = $request->input('price');
+         $dish->name = $data['name'];
+         $dish->description = $data['description'];
+         $dish->image = $_FILES['image']['name'];
+         $dish->price = $data['price'];
          $dish->save();
+
          return redirect()->route('Dashboard.index');
     }
 

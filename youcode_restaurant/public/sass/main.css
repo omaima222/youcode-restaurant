@@ -7,6 +7,7 @@
 
 body {
   font-family: "Open Sans", sans-serif;
+  box-sizing: border-box;
 }
 
 .navBar {
@@ -274,16 +275,6 @@ table button:hover {
   border: 1px solid #2e0206;
 }
 
-.testcard {
-  border: 2px solid black;
-  width: 20rem;
-  height: 10rem;
-  display: block;
-  border-radius: 20px;
-  padding: 2rem;
-  text-align: center;
-}
-
 .welcome {
   background-image: url("img/547397.jpg");
   background-position: center;
@@ -434,7 +425,6 @@ table button:hover {
   height: 8.8rem;
   padding: 1rem;
   background-color: #2e0206;
-  font-family: "Cinzel", serif;
   color: rgb(238, 225, 201);
 }
 .allDishes .dish .dishInfo .dishInfo_head {
@@ -444,17 +434,20 @@ table button:hover {
 .allDishes .dish .dishInfo .dishInfo_head h1 {
   font-size: 1.5rem;
   font-weight: 300;
+  font-family: "Cinzel", serif;
 }
 .allDishes .dish .dishInfo .dishInfo_head h2 {
   font-size: 1.2rem;
   font-weight: 300;
   color: rgb(219, 169, 75);
+  font-family: "Cinzel", serif;
 }
 .allDishes .dish .dishInfo p {
   margin-top: 1rem;
   margin-bottom: 1rem;
   font-weight: 300;
-  font-size: 0.8rem;
+  font-size: 1rem;
+  font-family: "Open Sans", sans-serif;
 }
 .allDishes .dish .dishInfo button {
   float: right;
@@ -523,6 +516,7 @@ table button:hover {
   font-family: "Cinzel", serif;
 }
 .dishForm .body form .anInput input {
+  background-color: rgb(238, 225, 201);
   padding: 0.3rem;
   border-radius: 2px;
   -webkit-border-radius: 2px;
@@ -540,6 +534,7 @@ table button:hover {
   outline: none;
 }
 .dishForm .body form textarea {
+  background-color: rgb(238, 225, 201);
   padding: 0.3rem;
   border: none;
   border-radius: 2px;

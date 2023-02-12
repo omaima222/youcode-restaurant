@@ -31,6 +31,7 @@
                     font-family: 'Cinzel', serif;
                 }
                 input{
+                    background-color: $text-color;
                     padding: 0.3rem;
                     border-radius: 2px;
                     -webkit-border-radius: 2px;
@@ -49,6 +50,7 @@
                 }
             }
             textarea{
+                background-color: $text-color;
                 padding: 0.3rem;
                 border: none;
                 border-radius: 2px;
@@ -91,3 +93,4 @@
    
     }
 }
+
